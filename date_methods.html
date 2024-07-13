@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Methods</title>
+</head>
+<body>
+    <button onclick="getFullDate()">Full Date</button>
+    <button onclick="getFullYear()">Year</button>
+    <button onclick="getMonth()">Month</button>
+    <button onclick="getDate()">Date</button>
+    <button onclick="getDay()">Day</button>
+    <button onclick="getHours()">Hours</button>
+    <button onclick="getMinutes()">Minutes</button>
+    <button onclick="getSeconds()">Seconds</button>
+    <button onclick="getMilliseconds()">Milliseconds</button>
+    <button onclick="getTime()">Time (ms since 1970)</button>
+    <p id="res"></p>
+</body>
+<script>
+    var a = new Date();
+
+    function getFullDate() {
+        document.getElementById('res').innerText = a;
+    }
+
+    function getFullYear() {
+        document.getElementById('res').innerText = a.getFullYear();
+    }
+
+    function getMonth() {
+        document.getElementById('res').innerText = a.getMonth() + 1; // Months are 0-based
+    }
+
+    function getDate() {
+        document.getElementById('res').innerText = a.getDate();
+    }
+
+    function getDay() {
+        document.getElementById('res').innerText = a.getDay(); // 0 = Sunday, 1 = Monday, etc.
+    }
+
+    function getHours() {
+        document.getElementById('res').innerText = a.getHours();
+    }
+
+    function getMinutes() {
+        document.getElementById('res').innerText = a.getMinutes();
+    }
+
+    function getSeconds() {
+        document.getElementById('res').innerText = a.getSeconds();
+    }
+
+    function getMilliseconds() {
+        document.getElementById('res').innerText = a.getMilliseconds();
+    }
+
+    function getTime() {
+        document.getElementById('res').innerText = a.getTime();
+    }
+</script>
+</html>

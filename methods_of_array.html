@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="res"></h1>
+    <button onclick="pop()">POP</button>
+    <button onclick="push()">PUSH</button>
+    <button onclick="slice()">SLICE</button>
+    <button onclick="reverse()">REVERSE</button>
+    <button onclick="shift()">SHIFT</button>
+</body>
+<script>
+    var fruits=["Mango","Apple","Pineapple","Banana"]
+    var vegetables=["Potato","Ladyfinger","Ginger"]
+    var num=[4,2,1,5] 
+
+    //used to check if variable is array or not
+    //var flag=Array.isArray(fruits)
+    //document.write(flag+"<br/>")
+    
+    //to print the array with seperated comma's
+    //var flag2=fruits.valueOf()
+    //document.write(flag2+"<br/>")
+
+    //to combine to array with specified string..
+    //var flag3=fruits.join(" , ")
+    //document.write(flag3+"<br/>")
+
+    //concatenating 2 arrays into one..
+    //var shop=fruits.concat(vegetables)
+    //document.write(shop+"<br/>")
+
+    //index of particular value..
+    //var flag4=fruits.indexOf("Apple")
+    //document.write(flag4+"<br/>")
+
+    var memo=num
+    var demo=fruits//bcoz if i do any changes in demo then it shouldn't cause any change in demo.
+    document.getElementById('res').innerText=demo
+    function pop(){
+        demo.pop();
+        document.getElementById('res').innerText=demo
+    }
+    function push(){
+        //demo.push("orange");
+        var s=prompt("Enter new fruit value")
+        demo.push(s);
+        document.getElementById('res').innerText=demo
+    }
+
+    function slice(){
+        //compulsory need to use a var here and the slice index we have passed so the elements before the array index will be sliced means deleted..
+        //var sl=demo.slice(4);
+        var sl=demo.slice(1,3);
+        document.getElementById('res').innerText=sl
+    }
+    
+    function reverse(){
+        num.reverse();
+        document.getElementById('res').innerText=num
+    }
+    
+    function shift(){
+        var y=demo.shift()
+        document.getElementById('res').innerText=y
+    }
+
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //method-1
+    var car=[];//declaration
+    cars=["Car1","Car2","Car3","Car4"];//[0,1,2,3] and if try to access 4 index=undefined
+    cars[5]="Car5";//can give values after initialization also.
+    document.write(cars[0])
+    document.write(cars[1])
+    document.write(cars[2])
+    document.write(cars[3])
+    document.write(cars[4])
+    document.write(cars[5])
+    //Car1Car2Car3Car4undefinedCar5
+
+
+    //method-2
+    var ca=new Array("10","20",30,"40")
+    document.write(ca[0])
+    ca=["Car111","Car222","Car333","Car444"];
+
+    for(i=0;i<ca.length;i++){
+        document.write(ca[i])
+    }
+    
+    //NOTE: in both method just the declaration has changes else initialization can be or is same..
+</script>
+</html>

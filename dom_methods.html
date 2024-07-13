@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" class="test">
+        Rajput Harshvardhan Singh
+        <h1>Helloo</h1>
+    </div>
+    <div class="test">
+        Singh is king
+    </div>
+    <!-- <h1 class="test">Hello</h1>
+    <h2 class="test">Bye</h2> -->
+</body>
+<script type="text/javascript"> 
+    /*var x=document.getElementById("main");
+    var y=document.getElementById("main").innerHTML;
+    var z=document.getElementById("main").innerHTML="<h1>Rajput Harshvardhan Singh</h1>";
+    console.log(x);
+    console.log(y);
+    console.log(z);*/
+
+    //if same class is given to many then JS gives them a key from top to bottom so here 0 key was to first div and 1st key was given to 2nd div so we can excess any of them in this way and NOTE: if we directly try to get the innerHTML without specifying any key then we will get undefined. 
+    //var x=document.getElementsByClassName("test").innerHTML;
+    //alert(x)
+
+
+    //CHANGING THE INNERHTML OF DIV1 AND DIV2:
+    document.getElementsByClassName("test")[0].innerHTML="Singh is king";
+    document.getElementsByClassName("test")[1].innerHTML="Rajput Harshvardhan Singh";
+</script> 
+</html>

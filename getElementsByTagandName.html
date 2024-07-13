@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByName and getElementsByTagName Example</title>
+</head>
+<body>
+    <h1>getElementsByName and getElementsByTagName Example</h1>
+
+    <!-- Example elements -->
+    <input type="text" name="username" value="John Doe">
+    <input type="text" name="username" value="Jane Smith">
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    <div>Some div content.</div>
+    
+    <button onclick="displayElements()">Click to Display Elements</button>
+
+    <script>
+        function displayElements() {
+            // Using getElementsByName to get all input elements with the name 'username'
+            var nameElements = document.getElementsByName('username');
+            console.log('Elements with name="username":');
+            for (var i = 0; i < nameElements.length; i++) {
+                console.log(nameElements[i].value);
+            }
+
+            // Using getElementsByTagName to get all paragraph elements
+            var tagElements = document.getElementsByTagName('p');
+            console.log('All paragraph elements:');
+            for (var j = 0; j < tagElements.length; j++) {
+                console.log(tagElements[j].innerText);
+            }
+        }
+    </script>
+</body>
+</html>
