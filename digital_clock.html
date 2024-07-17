@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 100px;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body onload="getTime()">
+    <h1></h1>
+</body>
+<script>
+    function getTime(){
+        var a=new Date();
+        var h=a.getHours();
+        var m=a.getMinutes();
+        var s=a.getSeconds();
+        var session="AM";
+
+        h=h<10?"0"+h:h; //if h is less than 10 then add 0 before it
+        m=m<10?"0"+m:m; //if m is less than 10 then add 0 before it
+        s=s<10?"0"+s:s; //if s is less than 10 then add 0 before it
+
+        if(h>=12){
+            session="PM";
+        }
+        if(h>12){
+            h=h-12;
+        }
+
+        var time=h+" : "+m+" : "+s+" "+session;
+        document.getElementsByTagName('h1')[0].innerText=time;
+        setTimeout(getTime,1000);
+    }
+</script>
+</html>

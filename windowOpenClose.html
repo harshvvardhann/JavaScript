@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var win;
+
+    function openWeb(){
+        win2 = window.open("https://www.instagram.com","width=100","height=300");
+        win = window.open("https://www.google.com", "width=200","height=300");
+    }
+
+    function closeWeb(){
+        win.close();
+    }
+</script>
+<body>
+    <button onclick="openWeb()">Open Website</button>
+    <button onclick="closeWeb()">Close Website</button>
+</body>
+</html>

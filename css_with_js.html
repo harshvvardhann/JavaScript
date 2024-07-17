@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .name{
+            text-align: center;
+            margin: auto;
+            font-size: 50px;
+            color: slateblue;
+            cursor: pointer;
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div onmouseenter="modify()" onmouseleave="unmodify()" class="name" id="main">Hello I'm Harshvardhan</div>
+</body>
+<script>
+    function modify(){  
+        document.getElementById('main').style.fontSize="100px";
+        document.getElementById('main').style.color="blue";
+    }
+    function unmodify(){
+        document.getElementById('main').style.fontSize="50px";
+        document.getElementById('main').style.color="red    ";
+    }
+</script>
+</html>
